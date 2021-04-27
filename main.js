@@ -7,6 +7,14 @@ var string_array = [];
 /* 
   loops through int_array, 
   and fills string_array as defined above.
+
+  ex: 
+    int_array = 
+      ['C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\username\\Desktop\\kargo intern assessment\\main.js',
+      '22'] -> 
+    string_array = 
+      ["TwoTwo"]
 */
 for (var i = 2; i < int_array.length; ++i) {
   var num = int_array[i];
@@ -58,7 +66,13 @@ for (var i = 2; i < int_array.length; ++i) {
 var output = string_array[0];
 
 /*
-  loops through string_array
+  loops through string_array,
+  and puts output in the format specified in the 
+  task instruction criteria examples (part 5.b)
+
+  ex: 
+    string_array = ["OneFive", "Two"] -> 
+    output = "OneFive,Two"
 */
 for (var i = 1; i < string_array.length; ++i) {
   output = output + "," + string_array[i];
