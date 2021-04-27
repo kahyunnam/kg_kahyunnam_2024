@@ -1,7 +1,13 @@
+//an array containining command-line arguments
 var int_array = process.argv;
+
+//string_array will later contain the phonetic equivalent int_array
 var string_array = [];
 
-
+/* 
+  loops through int_array, 
+  and fills string_array as defined above.
+*/
 for (var i = 2; i < int_array.length; ++i) {
   var num = int_array[i];
   var num_string = "";
@@ -44,12 +50,16 @@ for (var i = 2; i < int_array.length; ++i) {
     num_string = ns + num_string;
     num = Math.floor(num / 10);
   }
+
   string_array[i - 2] = num_string;
 }
 
-
+//output will contain the std output in specified format
 var output = string_array[0];
 
+/*
+  loops through string_array
+*/
 for (var i = 1; i < string_array.length; ++i) {
   output = output + "," + string_array[i];
 }
